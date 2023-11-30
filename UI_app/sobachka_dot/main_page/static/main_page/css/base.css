@@ -1,0 +1,22 @@
+.bi {
+    filter: invert(1);
+
+}
+
+main {
+    padding-top: 0rem;
+}
+.dropdown{
+    list-style: none;
+    }
+
+.p-3 {
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;m;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+
+}
