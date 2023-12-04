@@ -9,6 +9,6 @@ urlpatterns = [
     path('dog-card', views.dog_card),
     # path('personal-area', views.personal_area),
     # path('faq', views.questions),
-    # path('forum', views.forum),
+    path('forum', views.forum),
     # path('authorization-page', views.authorization),
 ]

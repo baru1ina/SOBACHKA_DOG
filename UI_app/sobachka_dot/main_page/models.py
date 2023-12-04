@@ -6,7 +6,7 @@ class Breed(models.Model):
     info = models.TextField()
 
     def __str__(self):
-        return self.id_breed
+        return self.name
 
 class Person(models.Model):
     id_person = models.AutoField(primary_key=True, unique=True)

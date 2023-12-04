@@ -7,14 +7,13 @@
 {% endblock %}
 
 {% block js_additional %}
-<script src="{% static 'main_page/js/index.js' %}"></script>
+<script type="module" src="{% static 'main_page/js/index.js' %}"></script>
 {% endblock %}
 
 {% block title %} main page {% endblock %}
 
 {% block content %}
 
-<main>
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
@@ -111,11 +110,6 @@
 
 
 <!--  </div>&lt;!&ndash; /.container &ndash;&gt;-->
-
-
-
-
-</main>
 
 {% endblock %}
 

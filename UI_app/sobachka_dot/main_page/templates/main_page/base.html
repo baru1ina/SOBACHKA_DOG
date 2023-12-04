@@ -13,6 +13,7 @@
     {% load static %}
 
     <link rel = "stylesheet" href = "{% static 'main_page/css/base.css' %}" >
+    <script type="module" src="{% static 'main_page/js/base.js' %}"></script>
 
     {% block css_additional %}{% endblock %}
 
@@ -28,18 +29,20 @@
     <header class="p-3 text-bg-dark">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-               <!--<h1><span class="fs-2"><font style="vertical-align: inherit;">SOBACHKA.DOG</font> </span> </h1>-->
+
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img class = "bi" src = "{% static 'main_page/img/logo.png' %} " width="50" height="50" >
+                <img class = "bi" src = "{% static 'main_page/img/logo.png' %} " width="70" height="70" >
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <li><a href="/" class="nav-link px-2 text-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Главная страница</font></font></a></li>
-                  <li><a href="/about-us" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">О нас</font></font></a></li>
-                  <li><a href="/breed-map" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Карта пород</font></font></a></li>
-                  <!--<li><a href="/forum" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Форум</font></font></a></li>
-                  <li><a href="/faq" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FAQ</font></font></a></li>
+<!--                  <li><a href="/" class="nav-link px-2 text-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">главная страница</font></font></a></li>-->
+                  <li><a href="/about-us" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">О НАС</font></font></a></li>
+                  <li><a href="/breed-map" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">КАРТА ПОРОД</font></font></a></li>
+
+                  <li><a href="/forum" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Форум</font></font></a></li>
+                  <!--<li><a href="/faq" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FAQ</font></font></a></li>
                   <li><a href="/personal-area" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ЛК</font></font></a></li>-->
+
             </ul>
 
 <!--            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">-->
@@ -50,11 +53,12 @@
 <!--              <button type="button" class="btn btn-outline-light me-2"><a href="/authorization-page" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">log in</font></font></a></button>-->
 <!--              <button type="button" class="btn btn-warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sign up</font></font></button>-->
 <!--            </div>-->
+
               <li class="nav-item dropdown">
                   <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true" data-bs-display="static">
-                    <span class="d-lg-none" aria-hidden="true">Bootstrap</span>МЕНЮ
+                    <span class="d-lg-none" aria-hidden="true"></span>МЕНЮ
                   </button>
-                  <ul class="dropdown-menu dropdown-menu-end show" data-bs-popper="static">
+                  <ul class="dropdown-menu" data-bs-popper="static">
                     <li>
                         <h6 class="dropdown-header">SOBACHKA.DOG</h6></li>
                     <li>
@@ -73,24 +77,14 @@
               </li>
           </div>
         </div>
-
-<!--        <li class="nav-item dropdown">-->
-<!--                <a class="nav-link dropdown-toggle show" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="true">Dropdown</a>-->
-<!--                <ul class="dropdown-menu show" data-bs-popper="static">-->
-<!--                  <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>-->
-<!--                  <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>-->
-<!--                  <li><hr class="dropdown-divider"></li>-->
-<!--                  <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-
       </header>
 
 
+<main>
 
-    {% block content %} {% endblock %}
+     {% block content %} {% endblock %}
 
-
+</main>
 </body>
 
 

@@ -11,11 +11,13 @@ def about(request):
 
 
 def breed_map(request):
-    return render(request, 'main_page/breed_map.html')
+    breeds = Breed.objects.all()
+    return render(request, 'main_page/breed_map.html', {'breeds': breeds})
 
 
 def breed_card(request):
-    return render(request, 'main_page/breed_card.html')
+    breed = Breed.objects.get(name='african')
+    return render(request, 'main_page/breed_card.html', {'breed': breed})
 
 
 def dog_card(request):
@@ -32,8 +34,8 @@ def dog_card(request):
 #     return render(request, 'main_page/faq.html')
 #
 #
-# def forum(request):
-#     return render(request, 'main_page/forum.html')
+def forum(request):
+    return render(request, 'main_page/forum.html')
 #
 #
 # def authorization(request):
