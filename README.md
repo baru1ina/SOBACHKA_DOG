@@ -2,7 +2,7 @@
 
 pip install pymysql
 
-pip install mysqlclient /?
+pip install mysqlclient /
 
 pip install mysql-connector-python /?
 
