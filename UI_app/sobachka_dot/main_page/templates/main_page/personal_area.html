@@ -1,0 +1,114 @@
+{% extends 'main_page/base.html' %}
+
+{% load static %}
+
+{% block css_additional %}
+<link rel = "stylesheet" href = "{% static 'main_page/css/index.css' %}" >
+{% endblock %}
+
+{% block title %} personal area page {% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <main>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Анкета пользователя</font></font></h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Имя</font></font></label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" wfd-id="id1">
+              <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Требуется действительное имя.
+              </font></font></div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Фамилия</font></font></label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" wfd-id="id2">
+              <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Требуется действительная фамилия.
+              </font></font></div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Имя пользователя</font></font></label>
+              <div class="input-group has-validation">
+                <span class="input-group-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@</font></font></span>
+                <input type="text" class="form-control" id="username" placeholder="Имя пользователя" required="" wfd-id="id3">
+              <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  Требуется ваше имя пользователя.
+                </font></font></div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Электронная почта </font></font><span class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(необязательно)</font></font></span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" wfd-id="id4">
+              <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Пожалуйста, введите действительный адрес электронной почты для получения обновлений о доставке.
+              </font></font></div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Адрес</font></font></label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Мейн-стрит" required="" wfd-id="id5">
+              <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Пожалуйста, введите адрес доставки.
+              </font></font></div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Адрес 2 </font></font><span class="text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(необязательно)</font></font></span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Квартира или люкс" wfd-id="id6">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Страна</font></font></label>
+              <select class="form-select" id="country" required="">
+                <option value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Выбирать...</font></font></option>
+                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Соединенные Штаты</font></font></option>
+              </select>
+              <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Пожалуйста, выберите действительную страну.
+              </font></font></div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Состояние</font></font></label>
+              <select class="form-select" id="state" required="">
+                <option value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Выбирать...</font></font></option>
+                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Калифорния</font></font></option>
+              </select>
+              <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Укажите допустимое состояние.
+              </font></font></div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Почтовый индекс</font></font></label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="" wfd-id="id7">
+              <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                Требуется почтовый индекс.
+              </font></font></div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Сохранить изменения</font></font></button>
+        </form>
+      </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-body-secondary text-center text-small"
+    <p>© 2023 Fryasha && Linups Company. Inc.</p>
+      <ul class="list-inline">
+      <li class="list-inline-item"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Конфиденциальность</font></font></a></li>
+      <li class="list-inline-item"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Условия</font></font></a></li>
+      <li class="list-inline-item"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Поддерживать</font></font></a></li>
+    </ul>
+  </footer>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'main_page/base.html' %}
+{% load static %}
+
+{% block title %} about us page {% endblock %}
+
+{% block css_additional %}
+<link rel = "stylesheet" href = "{% static 'main_page/css/forum.css' %}" >
+{% endblock %}
+
+{% block js_additional %}
+<script type="module" src="{% static 'main_page/js/forum.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+		<form class="registration">
+			<h1>Registration Form</h1>
+
+			<label for="username">
+				<span>Username</span>
+
+				<input type="text" id="username" minlength="3" required>
+
+				<ul class="input-requirements">
+					<li>At least 3 characters long</li>
+					<li>Must only contain letters and numbers (no special characters)</li>
+				</ul>
+			</label>
+
+			<label for="password">
+				<span>Password</span>
+
+				<input type="password" id="password"
+						maxlength="100" minlength="8" required>
+
+				<ul class="input-requirements">
+					<li>At least 8 characters long (and less than 100 characters)</li>
+					<li>Contains at least 1 number</li>
+					<li>Contains at least 1 lowercase letter</li>
+					<li>Contains at least 1 uppercase letter</li>
+					<li>Contains a special character (e.g. @ !)</li>
+				</ul>
+			</label>
+
+			<label for="password_repeat">
+				<span>Repeat Password</span>
+				<input type="password" id="password_repeat" maxlength="100" minlength="8" required>
+			</label>
+
+			<br>
+
+			<input type="submit">
+
+		</form>
+	</div>
+
+{% endblock %}

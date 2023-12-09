@@ -1,0 +1,14 @@
+.bd-placeholder-img {}
+
+.card{
+margin-top:2rem;
+margin-left:10%;
+margin-right:10%;
+max-width:80%
+}
+
+form.d-flex{
+margin-left:10%;
+margin-right:10%;
+margin-top:2rem;
+}

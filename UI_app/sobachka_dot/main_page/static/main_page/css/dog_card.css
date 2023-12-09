@@ -1,0 +1,25 @@
+div {
+    display: block;
+}
+
+.col-md-7{
+ margin-left: 5rem;
+}
+
+g-5, .gy-5 {
+    --bs-gutter-y: 3rem;
+}
+
+.g-5, .gx-5 {
+    --bs-gutter-x: 3rem;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
