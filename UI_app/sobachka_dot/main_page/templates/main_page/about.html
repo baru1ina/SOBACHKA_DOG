@@ -1,7 +1,28 @@
 {% extends 'main_page/base.html' %}
 
+{% load static %}
+
 {% block title %} about us page {% endblock %}
 
+{% block css_additional %}
+<link rel = "stylesheet" href = "{% static 'main_page/css/about.css' %}" >
+{% endblock %}
+
+{% block js_additional %}{% endblock %}
+
+
 {% block content %}
-HUINYA
+<div class="card">
+              <div class="card-header">
+                ПОДЕЛИСЬ СВОЕЙ СОБАЧКОЙ
+              </div>
+              <div class="card-body">
+                <img src="{% static 'main_page/img/aboutus.png' %}" >
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+              <div class="card-footer text-body-secondary">
+                2 days ago
+              </div>
+            </div>
 {% endblock %}

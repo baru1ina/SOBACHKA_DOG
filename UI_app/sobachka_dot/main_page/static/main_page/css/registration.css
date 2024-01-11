@@ -33,7 +33,26 @@ a {
 	max-width: 600px;
 	margin: 0 auto;
 	padding-bottom: 20px;
-	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+}
+
+span.helptext{
+     display: flex;
+     justify-content: center;
+     width:100%;
+     text-align:center;
+     padding-left: 30px;
+     padding-right: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 30px;
 }
 
 
@@ -143,7 +162,8 @@ label {
   display: block;
   margin: var(--fh-layout-margin);
   text-align: var(--fh-layout-text-align);
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   position: relative;
   padding: 0 20px;
 }

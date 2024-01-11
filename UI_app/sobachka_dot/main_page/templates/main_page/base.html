@@ -37,10 +37,46 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 <!--                  <li><a href="/" class="nav-link px-2 text-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">главная страница</font></font></a></li>-->
                   <li><a href="/about-us" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">О НАС</font></font></a></li>
-                  <li><a href="/breed-map" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">КАРТА ПОРОД</font></font></a></li>
 
-                  <li><a href="/forum" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Форум</font></font></a></li>
-                  <!--<li><a href="/faq" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FAQ</font></font></a></li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="/breed-map" class="nav-link px-2 text-white">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">КАРТА ПОРОД
+                            </font>
+                        </font>
+                    </a>
+                </li>
+
+<!--                  <li><a href="/forum" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Форум</font></font></a></li>-->
+
+                  <li>
+                      <a href="/log_out" class="nav-link px-2">
+                          <font style="vertical-align: inherit;">
+                              <font style="vertical-align: inherit;">ВЫЙТИ</font>
+                          </font>
+                      </a>
+                  </li>
+                  {% else %}
+                <li>
+                    <a href="/log_in" class="nav-link px-2">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">ВОЙТИ
+                        </font>
+                    </font>
+                    </a>
+                </li>
+                <li>
+                    <a href="/registration-page" class="nav-link px-2">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">ЗАРЕГИСТРИРОВАТЬСЯ
+                        </font>
+                    </font>
+                    </a>
+                </li>
+                {% endif %}
+
+                  <!--<li><a href="/faq" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ФАКЮ</font></font></a></li>
                   <li><a href="/personal-area" class="nav-link px-2 text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ЛК</font></font></a></li>-->
 
             </ul>
@@ -54,35 +90,43 @@
 <!--              <button type="button" class="btn btn-warning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sign up</font></font></button>-->
 <!--            </div>-->
 
-              <li class="nav-item dropdown">
-                  <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true" data-bs-display="static">
-                    <span class="d-lg-none" aria-hidden="true"></span>МЕНЮ
-                  </button>
-                  <ul class="dropdown-menu" data-bs-popper="static">
-                    <li>
-                        <h6 class="dropdown-header">SOBACHKA.DOG</h6></li>
-                    <li>
-                        <a class="dropdown-item" href="/about-us">О НАС</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="/">ВОЙТИ В ЛК</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="/">КУПИТЬ ПОДПИСКУ</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="/">FAQ</a>
-                    </li>
-                  </ul>
-              </li>
+<!--              <li class="nav-item dropdown">-->
+<!--                  <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true" data-bs-display="static">-->
+<!--                    <span class="d-lg-none" aria-hidden="true"></span>МЕНЮ-->
+<!--                  </button>-->
+<!--                  <ul class="dropdown-menu" data-bs-popper="static">-->
+<!--                    <li>-->
+<!--                        <h6 class="dropdown-header">SOBACHKA.DOG</h6></li>-->
+<!--                    <li>-->
+<!--                        <a class="dropdown-item" href="/about-us">О НАС</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a class="dropdown-item" href="/">ВОЙТИ В ЛК</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a class="dropdown-item" href="/">КУПИТЬ ПОДПИСКУ</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a class="dropdown-item" href="/">FAQ</a>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--              </li>-->
+
           </div>
         </div>
       </header>
 
 
 <main>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
 
-     {% block content %} {% endblock %}
+    {% block content %} {% endblock %}
 
 </main>
 </body>
